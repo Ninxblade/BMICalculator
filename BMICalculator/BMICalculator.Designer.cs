@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.UnitTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.ImperialUnitRadioButton = new System.Windows.Forms.RadioButton();
             this.MetricUnitRadioButton = new System.Windows.Forms.RadioButton();
+            this.ImperialUnitRadioButton = new System.Windows.Forms.RadioButton();
             this.BMITextBox = new System.Windows.Forms.TextBox();
             this.UserInputTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.WeightLabel = new System.Windows.Forms.Label();
@@ -60,31 +60,31 @@
             this.UnitTableLayoutPanel.TabIndex = 0;
             this.UnitTableLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.UnitTableLayoutPanel_Paint);
             // 
-            // ImperialUnitRadioButton
-            // 
-            this.ImperialUnitRadioButton.AutoSize = true;
-            this.ImperialUnitRadioButton.Location = new System.Drawing.Point(3, 3);
-            this.ImperialUnitRadioButton.Name = "ImperialUnitRadioButton";
-            this.ImperialUnitRadioButton.Size = new System.Drawing.Size(128, 35);
-            this.ImperialUnitRadioButton.TabIndex = 0;
-            this.ImperialUnitRadioButton.TabStop = true;
-            this.ImperialUnitRadioButton.Text = "Imperial";
-            this.ImperialUnitRadioButton.UseVisualStyleBackColor = true;
-            this.ImperialUnitRadioButton.CheckedChanged += new System.EventHandler(this.ImperialUnitRadioButton_CheckedChanged);
-            this.ImperialUnitRadioButton.Click += new System.EventHandler(this.ImperialUnitRadioButton_Click);
-            // 
             // MetricUnitRadioButton
             // 
             this.MetricUnitRadioButton.AutoSize = true;
             this.MetricUnitRadioButton.Location = new System.Drawing.Point(3, 52);
             this.MetricUnitRadioButton.Name = "MetricUnitRadioButton";
-            this.MetricUnitRadioButton.Size = new System.Drawing.Size(106, 35);
+            this.MetricUnitRadioButton.Size = new System.Drawing.Size(130, 42);
             this.MetricUnitRadioButton.TabIndex = 1;
             this.MetricUnitRadioButton.TabStop = true;
             this.MetricUnitRadioButton.Text = "Metric";
             this.MetricUnitRadioButton.UseVisualStyleBackColor = true;
             this.MetricUnitRadioButton.CheckedChanged += new System.EventHandler(this.MetricUnitRadioButton_CheckedChanged);
             this.MetricUnitRadioButton.Click += new System.EventHandler(this.MetricUnitRadioButton_Click);
+            // 
+            // ImperialUnitRadioButton
+            // 
+            this.ImperialUnitRadioButton.AutoSize = true;
+            this.ImperialUnitRadioButton.Location = new System.Drawing.Point(3, 3);
+            this.ImperialUnitRadioButton.Name = "ImperialUnitRadioButton";
+            this.ImperialUnitRadioButton.Size = new System.Drawing.Size(136, 43);
+            this.ImperialUnitRadioButton.TabIndex = 0;
+            this.ImperialUnitRadioButton.TabStop = true;
+            this.ImperialUnitRadioButton.Text = "Imperial";
+            this.ImperialUnitRadioButton.UseVisualStyleBackColor = true;
+            this.ImperialUnitRadioButton.CheckedChanged += new System.EventHandler(this.ImperialUnitRadioButton_CheckedChanged);
+            this.ImperialUnitRadioButton.Click += new System.EventHandler(this.ImperialUnitRadioButton_Click);
             // 
             // BMITextBox
             // 
@@ -93,7 +93,7 @@
             this.BMITextBox.Location = new System.Drawing.Point(3, 49);
             this.BMITextBox.Name = "BMITextBox";
             this.BMITextBox.ReadOnly = true;
-            this.BMITextBox.Size = new System.Drawing.Size(274, 38);
+            this.BMITextBox.Size = new System.Drawing.Size(274, 45);
             this.BMITextBox.TabIndex = 0;
             this.BMITextBox.TextChanged += new System.EventHandler(this.BMITextBox_TextChanged);
             // 
@@ -120,7 +120,7 @@
             this.WeightLabel.AutoSize = true;
             this.WeightLabel.Location = new System.Drawing.Point(3, 52);
             this.WeightLabel.Name = "WeightLabel";
-            this.WeightLabel.Size = new System.Drawing.Size(141, 31);
+            this.WeightLabel.Size = new System.Drawing.Size(123, 45);
             this.WeightLabel.TabIndex = 1;
             this.WeightLabel.Text = "My Weight";
             // 
@@ -128,7 +128,7 @@
             // 
             this.HeightTextBox.Location = new System.Drawing.Point(153, 3);
             this.HeightTextBox.Name = "HeightTextBox";
-            this.HeightTextBox.Size = new System.Drawing.Size(119, 38);
+            this.HeightTextBox.Size = new System.Drawing.Size(119, 45);
             this.HeightTextBox.TabIndex = 2;
             this.HeightTextBox.TextChanged += new System.EventHandler(this.HeightTextBox_TextChanged);
             this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightTextBox_KeyPress);
@@ -138,7 +138,7 @@
             this.HeightLabel.AutoSize = true;
             this.HeightLabel.Location = new System.Drawing.Point(3, 0);
             this.HeightLabel.Name = "HeightLabel";
-            this.HeightLabel.Size = new System.Drawing.Size(136, 31);
+            this.HeightLabel.Size = new System.Drawing.Size(116, 52);
             this.HeightLabel.TabIndex = 0;
             this.HeightLabel.Text = "My Height";
             this.HeightLabel.Click += new System.EventHandler(this.Label1_Click_2);
@@ -147,7 +147,7 @@
             // 
             this.WeightTextBox.Location = new System.Drawing.Point(153, 55);
             this.WeightTextBox.Name = "WeightTextBox";
-            this.WeightTextBox.Size = new System.Drawing.Size(119, 38);
+            this.WeightTextBox.Size = new System.Drawing.Size(119, 45);
             this.WeightTextBox.TabIndex = 3;
             this.WeightTextBox.TextChanged += new System.EventHandler(this.WeightTextBox_TextChanged);
             // 
@@ -182,13 +182,13 @@
             this.MultiLineTextBox.Location = new System.Drawing.Point(3, 3);
             this.MultiLineTextBox.Name = "MultiLineTextBox";
             this.MultiLineTextBox.ReadOnly = true;
-            this.MultiLineTextBox.Size = new System.Drawing.Size(274, 38);
+            this.MultiLineTextBox.Size = new System.Drawing.Size(274, 45);
             this.MultiLineTextBox.TabIndex = 1;
             this.MultiLineTextBox.TextChanged += new System.EventHandler(this.MultiLineTextBox_TextChanged);
             // 
             // BMICalculator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
             this.Controls.Add(this.BMITableLayoutPanel);

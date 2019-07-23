@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// Author's Name: Jason Li
+/// Author's Stuent#: 301012468
+/// Date last Modified: 7/23/2019
+/// Program Description: BMI Calcualtor using Imperial and Metric Units
+/// Version: 7
+/// </summary>
 
 namespace BMICalculator
 {
