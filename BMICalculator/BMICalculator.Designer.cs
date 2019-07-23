@@ -35,8 +35,8 @@
             this.UserInputTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.WeightLabel = new System.Windows.Forms.Label();
             this.HeightTextBox = new System.Windows.Forms.TextBox();
-            this.WeightTextBox = new System.Windows.Forms.TextBox();
             this.HeightLabel = new System.Windows.Forms.Label();
+            this.WeightTextBox = new System.Windows.Forms.TextBox();
             this.Submitbutton = new System.Windows.Forms.Button();
             this.BMITableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.MultiLineTextBox = new System.Windows.Forms.TextBox();
@@ -49,8 +49,8 @@
             // 
             this.UnitTableLayoutPanel.ColumnCount = 1;
             this.UnitTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.UnitTableLayoutPanel.Controls.Add(this.ImperialUnitRadioButton, 0, 0);
             this.UnitTableLayoutPanel.Controls.Add(this.MetricUnitRadioButton, 0, 1);
+            this.UnitTableLayoutPanel.Controls.Add(this.ImperialUnitRadioButton, 0, 0);
             this.UnitTableLayoutPanel.Location = new System.Drawing.Point(12, 104);
             this.UnitTableLayoutPanel.Name = "UnitTableLayoutPanel";
             this.UnitTableLayoutPanel.RowCount = 2;
@@ -71,6 +71,7 @@
             this.ImperialUnitRadioButton.Text = "Imperial";
             this.ImperialUnitRadioButton.UseVisualStyleBackColor = true;
             this.ImperialUnitRadioButton.CheckedChanged += new System.EventHandler(this.ImperialUnitRadioButton_CheckedChanged);
+            this.ImperialUnitRadioButton.Click += new System.EventHandler(this.ImperialUnitRadioButton_Click);
             // 
             // MetricUnitRadioButton
             // 
@@ -83,6 +84,7 @@
             this.MetricUnitRadioButton.Text = "Metric";
             this.MetricUnitRadioButton.UseVisualStyleBackColor = true;
             this.MetricUnitRadioButton.CheckedChanged += new System.EventHandler(this.MetricUnitRadioButton_CheckedChanged);
+            this.MetricUnitRadioButton.Click += new System.EventHandler(this.MetricUnitRadioButton_Click);
             // 
             // BMITextBox
             // 
@@ -128,14 +130,8 @@
             this.HeightTextBox.Name = "HeightTextBox";
             this.HeightTextBox.Size = new System.Drawing.Size(162, 38);
             this.HeightTextBox.TabIndex = 2;
-            // 
-            // WeightTextBox
-            // 
-            this.WeightTextBox.Location = new System.Drawing.Point(150, 55);
-            this.WeightTextBox.Name = "WeightTextBox";
-            this.WeightTextBox.Size = new System.Drawing.Size(162, 38);
-            this.WeightTextBox.TabIndex = 3;
-            this.WeightTextBox.TextChanged += new System.EventHandler(this.WeightTextBox_TextChanged);
+            this.HeightTextBox.TextChanged += new System.EventHandler(this.HeightTextBox_TextChanged);
+            this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightTextBox_KeyPress);
             // 
             // HeightLabel
             // 
@@ -146,6 +142,14 @@
             this.HeightLabel.TabIndex = 0;
             this.HeightLabel.Text = "My Height";
             this.HeightLabel.Click += new System.EventHandler(this.Label1_Click_2);
+            // 
+            // WeightTextBox
+            // 
+            this.WeightTextBox.Location = new System.Drawing.Point(150, 55);
+            this.WeightTextBox.Name = "WeightTextBox";
+            this.WeightTextBox.Size = new System.Drawing.Size(162, 38);
+            this.WeightTextBox.TabIndex = 3;
+            this.WeightTextBox.TextChanged += new System.EventHandler(this.WeightTextBox_TextChanged);
             // 
             // Submitbutton
             // 
@@ -182,7 +186,7 @@
             this.MultiLineTextBox.TabIndex = 1;
             this.MultiLineTextBox.TextChanged += new System.EventHandler(this.MultiLineTextBox_TextChanged);
             // 
-            // Form1
+            // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,10 +199,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "BMICalculator";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Click += new System.EventHandler(this.BMICalculator_Click);
             this.UnitTableLayoutPanel.ResumeLayout(false);
             this.UnitTableLayoutPanel.PerformLayout();
             this.UserInputTableLayoutPanel.ResumeLayout(false);
