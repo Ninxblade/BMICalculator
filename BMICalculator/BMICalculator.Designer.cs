@@ -1,6 +1,6 @@
 ﻿namespace BMICalculator
 {
-    partial class Form1
+    partial class BMICalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -161,8 +161,8 @@
             // 
             this.BMITableLayoutPanel.ColumnCount = 1;
             this.BMITableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.BMITableLayoutPanel.Controls.Add(this.BMITextBox, 0, 1);
             this.BMITableLayoutPanel.Controls.Add(this.MultiLineTextBox, 0, 0);
+            this.BMITableLayoutPanel.Controls.Add(this.BMITextBox, 0, 1);
             this.BMITableLayoutPanel.Location = new System.Drawing.Point(12, 12);
             this.BMITableLayoutPanel.Name = "BMITableLayoutPanel";
             this.BMITableLayoutPanel.RowCount = 2;
