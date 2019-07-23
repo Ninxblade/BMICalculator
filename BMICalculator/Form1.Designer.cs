@@ -28,34 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.UserTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.UnitTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ImperialUnitRadioButton = new System.Windows.Forms.RadioButton();
             this.MetricUnitRadioButton = new System.Windows.Forms.RadioButton();
-            this.AnswerTextBox = new System.Windows.Forms.TextBox();
-            this.MetricTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.BMITextBox = new System.Windows.Forms.TextBox();
+            this.UserInputTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.WeightLabel = new System.Windows.Forms.Label();
             this.HeightTextBox = new System.Windows.Forms.TextBox();
             this.WeightTextBox = new System.Windows.Forms.TextBox();
             this.HeightLabel = new System.Windows.Forms.Label();
             this.Submitbutton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.UserTableLayoutPanel.SuspendLayout();
-            this.MetricTableLayoutPanel.SuspendLayout();
+            this.BMITableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.MultiLineTextBox = new System.Windows.Forms.TextBox();
+            this.UnitTableLayoutPanel.SuspendLayout();
+            this.UserInputTableLayoutPanel.SuspendLayout();
+            this.BMITableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // UserTableLayoutPanel
+            // UnitTableLayoutPanel
             // 
-            this.UserTableLayoutPanel.ColumnCount = 1;
-            this.UserTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.UserTableLayoutPanel.Controls.Add(this.ImperialUnitRadioButton, 0, 0);
-            this.UserTableLayoutPanel.Controls.Add(this.MetricUnitRadioButton, 0, 1);
-            this.UserTableLayoutPanel.Location = new System.Drawing.Point(12, 87);
-            this.UserTableLayoutPanel.Name = "UserTableLayoutPanel";
-            this.UserTableLayoutPanel.RowCount = 2;
-            this.UserTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.09489F));
-            this.UserTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.90511F));
-            this.UserTableLayoutPanel.Size = new System.Drawing.Size(142, 97);
-            this.UserTableLayoutPanel.TabIndex = 0;
+            this.UnitTableLayoutPanel.ColumnCount = 1;
+            this.UnitTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.UnitTableLayoutPanel.Controls.Add(this.ImperialUnitRadioButton, 0, 0);
+            this.UnitTableLayoutPanel.Controls.Add(this.MetricUnitRadioButton, 0, 1);
+            this.UnitTableLayoutPanel.Location = new System.Drawing.Point(12, 104);
+            this.UnitTableLayoutPanel.Name = "UnitTableLayoutPanel";
+            this.UnitTableLayoutPanel.RowCount = 2;
+            this.UnitTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.09489F));
+            this.UnitTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.90511F));
+            this.UnitTableLayoutPanel.Size = new System.Drawing.Size(142, 97);
+            this.UnitTableLayoutPanel.TabIndex = 0;
+            this.UnitTableLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.UnitTableLayoutPanel_Paint);
             // 
             // ImperialUnitRadioButton
             // 
@@ -81,35 +84,39 @@
             this.MetricUnitRadioButton.UseVisualStyleBackColor = true;
             this.MetricUnitRadioButton.CheckedChanged += new System.EventHandler(this.MetricUnitRadioButton_CheckedChanged);
             // 
-            // AnswerTextBox
+            // BMITextBox
             // 
-            this.AnswerTextBox.Location = new System.Drawing.Point(24, 368);
-            this.AnswerTextBox.Name = "AnswerTextBox";
-            this.AnswerTextBox.Size = new System.Drawing.Size(312, 38);
-            this.AnswerTextBox.TabIndex = 0;
+            this.BMITextBox.BackColor = System.Drawing.Color.LightGray;
+            this.BMITextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BMITextBox.Location = new System.Drawing.Point(3, 48);
+            this.BMITextBox.Name = "BMITextBox";
+            this.BMITextBox.ReadOnly = true;
+            this.BMITextBox.Size = new System.Drawing.Size(312, 38);
+            this.BMITextBox.TabIndex = 0;
+            this.BMITextBox.TextChanged += new System.EventHandler(this.BMITextBox_TextChanged);
             // 
-            // MetricTableLayoutPanel
+            // UserInputTableLayoutPanel
             // 
-            this.MetricTableLayoutPanel.ColumnCount = 2;
-            this.MetricTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.67626F));
-            this.MetricTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.32374F));
-            this.MetricTableLayoutPanel.Controls.Add(this.WeightLabel, 0, 1);
-            this.MetricTableLayoutPanel.Controls.Add(this.HeightTextBox, 1, 0);
-            this.MetricTableLayoutPanel.Controls.Add(this.WeightTextBox, 1, 1);
-            this.MetricTableLayoutPanel.Controls.Add(this.HeightLabel, 0, 0);
-            this.MetricTableLayoutPanel.Location = new System.Drawing.Point(15, 204);
-            this.MetricTableLayoutPanel.Name = "MetricTableLayoutPanel";
-            this.MetricTableLayoutPanel.RowCount = 2;
-            this.MetricTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.54546F));
-            this.MetricTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
-            this.MetricTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.MetricTableLayoutPanel.Size = new System.Drawing.Size(278, 88);
-            this.MetricTableLayoutPanel.TabIndex = 5;
+            this.UserInputTableLayoutPanel.ColumnCount = 2;
+            this.UserInputTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.66667F));
+            this.UserInputTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.33333F));
+            this.UserInputTableLayoutPanel.Controls.Add(this.WeightLabel, 0, 1);
+            this.UserInputTableLayoutPanel.Controls.Add(this.HeightTextBox, 1, 0);
+            this.UserInputTableLayoutPanel.Controls.Add(this.HeightLabel, 0, 0);
+            this.UserInputTableLayoutPanel.Controls.Add(this.WeightTextBox, 1, 1);
+            this.UserInputTableLayoutPanel.Location = new System.Drawing.Point(15, 204);
+            this.UserInputTableLayoutPanel.Name = "UserInputTableLayoutPanel";
+            this.UserInputTableLayoutPanel.RowCount = 2;
+            this.UserInputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.54546F));
+            this.UserInputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
+            this.UserInputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.UserInputTableLayoutPanel.Size = new System.Drawing.Size(315, 97);
+            this.UserInputTableLayoutPanel.TabIndex = 5;
             // 
             // WeightLabel
             // 
             this.WeightLabel.AutoSize = true;
-            this.WeightLabel.Location = new System.Drawing.Point(3, 48);
+            this.WeightLabel.Location = new System.Drawing.Point(3, 52);
             this.WeightLabel.Name = "WeightLabel";
             this.WeightLabel.Size = new System.Drawing.Size(141, 31);
             this.WeightLabel.TabIndex = 1;
@@ -117,16 +124,16 @@
             // 
             // HeightTextBox
             // 
-            this.HeightTextBox.Location = new System.Drawing.Point(155, 3);
+            this.HeightTextBox.Location = new System.Drawing.Point(150, 3);
             this.HeightTextBox.Name = "HeightTextBox";
-            this.HeightTextBox.Size = new System.Drawing.Size(120, 38);
+            this.HeightTextBox.Size = new System.Drawing.Size(162, 38);
             this.HeightTextBox.TabIndex = 2;
             // 
             // WeightTextBox
             // 
-            this.WeightTextBox.Location = new System.Drawing.Point(155, 51);
+            this.WeightTextBox.Location = new System.Drawing.Point(150, 55);
             this.WeightTextBox.Name = "WeightTextBox";
-            this.WeightTextBox.Size = new System.Drawing.Size(120, 38);
+            this.WeightTextBox.Size = new System.Drawing.Size(162, 38);
             this.WeightTextBox.TabIndex = 3;
             this.WeightTextBox.TextChanged += new System.EventHandler(this.WeightTextBox_TextChanged);
             // 
@@ -142,7 +149,7 @@
             // 
             // Submitbutton
             // 
-            this.Submitbutton.Location = new System.Drawing.Point(47, 299);
+            this.Submitbutton.Location = new System.Drawing.Point(56, 326);
             this.Submitbutton.Name = "Submitbutton";
             this.Submitbutton.Size = new System.Drawing.Size(234, 35);
             this.Submitbutton.TabIndex = 6;
@@ -150,29 +157,40 @@
             this.Submitbutton.UseVisualStyleBackColor = true;
             this.Submitbutton.Click += new System.EventHandler(this.Submitbutton_Click);
             // 
-            // tableLayoutPanel1
+            // BMITableLayoutPanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(318, 65);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.BMITableLayoutPanel.ColumnCount = 1;
+            this.BMITableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.BMITableLayoutPanel.Controls.Add(this.BMITextBox, 0, 1);
+            this.BMITableLayoutPanel.Controls.Add(this.MultiLineTextBox, 0, 0);
+            this.BMITableLayoutPanel.Location = new System.Drawing.Point(12, 12);
+            this.BMITableLayoutPanel.Name = "BMITableLayoutPanel";
+            this.BMITableLayoutPanel.RowCount = 2;
+            this.BMITableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.BMITableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.BMITableLayoutPanel.Size = new System.Drawing.Size(318, 89);
+            this.BMITableLayoutPanel.TabIndex = 7;
+            // 
+            // MultiLineTextBox
+            // 
+            this.MultiLineTextBox.BackColor = System.Drawing.Color.LightGray;
+            this.MultiLineTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.MultiLineTextBox.Location = new System.Drawing.Point(3, 3);
+            this.MultiLineTextBox.Name = "MultiLineTextBox";
+            this.MultiLineTextBox.ReadOnly = true;
+            this.MultiLineTextBox.Size = new System.Drawing.Size(312, 38);
+            this.MultiLineTextBox.TabIndex = 1;
+            this.MultiLineTextBox.TextChanged += new System.EventHandler(this.MultiLineTextBox_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 433);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.AnswerTextBox);
+            this.Controls.Add(this.BMITableLayoutPanel);
             this.Controls.Add(this.Submitbutton);
-            this.Controls.Add(this.UserTableLayoutPanel);
-            this.Controls.Add(this.MetricTableLayoutPanel);
+            this.Controls.Add(this.UnitTableLayoutPanel);
+            this.Controls.Add(this.UserInputTableLayoutPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(7);
@@ -181,28 +199,30 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.UserTableLayoutPanel.ResumeLayout(false);
-            this.UserTableLayoutPanel.PerformLayout();
-            this.MetricTableLayoutPanel.ResumeLayout(false);
-            this.MetricTableLayoutPanel.PerformLayout();
+            this.UnitTableLayoutPanel.ResumeLayout(false);
+            this.UnitTableLayoutPanel.PerformLayout();
+            this.UserInputTableLayoutPanel.ResumeLayout(false);
+            this.UserInputTableLayoutPanel.PerformLayout();
+            this.BMITableLayoutPanel.ResumeLayout(false);
+            this.BMITableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel UserTableLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel UnitTableLayoutPanel;
         private System.Windows.Forms.RadioButton ImperialUnitRadioButton;
         private System.Windows.Forms.RadioButton MetricUnitRadioButton;
-        private System.Windows.Forms.TableLayoutPanel MetricTableLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel UserInputTableLayoutPanel;
         private System.Windows.Forms.Label HeightLabel;
         private System.Windows.Forms.Label WeightLabel;
         private System.Windows.Forms.Button Submitbutton;
-        private System.Windows.Forms.TextBox AnswerTextBox;
+        private System.Windows.Forms.TextBox BMITextBox;
         private System.Windows.Forms.TextBox HeightTextBox;
         private System.Windows.Forms.TextBox WeightTextBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel BMITableLayoutPanel;
+        private System.Windows.Forms.TextBox MultiLineTextBox;
     }
 }
 

@@ -12,9 +12,10 @@ namespace BMICalculator
 {
     public partial class Form1 : Form
     {
-        private string outputString { get; set; }
-
-        public float outputValue { get; set; }
+        double BMIHeight;
+        double Weight;
+        double answer;
+        
         public Form1()
         {
             InitializeComponent();
@@ -27,39 +28,65 @@ namespace BMICalculator
 
         private void ImperialUnitRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            //ImperialTableLayoutPanel.Visible = true;
-            MetricTableLayoutPanel.Visible = true;
+            UserInputTableLayoutPanel.Visible = true;
           
         }
         private void MetricUnitRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            MetricTableLayoutPanel.Visible = true;
-           // ImperialTableLayoutPanel.Visible = false;
+            UserInputTableLayoutPanel.Visible = true;
+           
         }
         private void Submitbutton_Click(object sender, EventArgs e)
         {
-             double MeticHeight ;
-            double MetricWeight;
-            double Metricanswer;
-            
             if (MetricUnitRadioButton.Checked == true)
             {
-
-                MeticHeight = double.Parse(HeightTextBox.Text);
-                MetricWeight = double.Parse(WeightTextBox.Text);
-                Metricanswer = MetricWeight / (MeticHeight * MeticHeight);
-                AnswerTextBox.Text = (Metricanswer).ToString();
+                BMIHeight = double.Parse(HeightTextBox.Text);
+                Weight = double.Parse(WeightTextBox.Text);
+                answer = Weight / (BMIHeight * BMIHeight);
+                BMITextBox.Text = (answer).ToString();
+                
             }
             if (ImperialUnitRadioButton.Checked == true)
             {
-                MeticHeight = double.Parse(HeightTextBox.Text);
-                MetricWeight = double.Parse(WeightTextBox.Text);
-                Metricanswer = (MetricWeight * 703 )/ (MeticHeight * MeticHeight);
-                AnswerTextBox.Text = (Metricanswer).ToString();
+                BMIHeight = double.Parse(HeightTextBox.Text);
+                Weight = double.Parse(WeightTextBox.Text);
+                answer = (Weight * 703) / (BMIHeight * BMIHeight);
+                BMITextBox.Text = (answer).ToString();
             }
 
         }
         private void WeightTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BMITextBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void MultiLineTextBox_TextChanged(object sender, EventArgs e)
+        {
+            answer = double.Parse(BMITextBox.Text);
+            if (answer < 18.5)
+            {
+                MultiLineTextBox.Text = "Underweight";
+            }
+            if (answer >= 18.5 && answer <= 24.9)
+            {
+                MultiLineTextBox.Text = "Normal";
+            }
+            if (answer >= 25 && answer <= 29.9)
+            {
+                MultiLineTextBox.Text = "Overweight";
+            }
+            if (answer >= 30)
+            {
+                MultiLineTextBox.Text = "Obese";
+            }
+        }
+
+        private void UnitTableLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
