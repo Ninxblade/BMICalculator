@@ -90,18 +90,18 @@
             // 
             this.BMITextBox.BackColor = System.Drawing.Color.LightGray;
             this.BMITextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.BMITextBox.Location = new System.Drawing.Point(3, 48);
+            this.BMITextBox.Location = new System.Drawing.Point(3, 49);
             this.BMITextBox.Name = "BMITextBox";
             this.BMITextBox.ReadOnly = true;
-            this.BMITextBox.Size = new System.Drawing.Size(312, 38);
+            this.BMITextBox.Size = new System.Drawing.Size(274, 38);
             this.BMITextBox.TabIndex = 0;
             this.BMITextBox.TextChanged += new System.EventHandler(this.BMITextBox_TextChanged);
             // 
             // UserInputTableLayoutPanel
             // 
             this.UserInputTableLayoutPanel.ColumnCount = 2;
-            this.UserInputTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.66667F));
-            this.UserInputTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.33333F));
+            this.UserInputTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.54546F));
+            this.UserInputTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
             this.UserInputTableLayoutPanel.Controls.Add(this.WeightLabel, 0, 1);
             this.UserInputTableLayoutPanel.Controls.Add(this.HeightTextBox, 1, 0);
             this.UserInputTableLayoutPanel.Controls.Add(this.HeightLabel, 0, 0);
@@ -112,7 +112,7 @@
             this.UserInputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.54546F));
             this.UserInputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
             this.UserInputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.UserInputTableLayoutPanel.Size = new System.Drawing.Size(315, 97);
+            this.UserInputTableLayoutPanel.Size = new System.Drawing.Size(275, 97);
             this.UserInputTableLayoutPanel.TabIndex = 5;
             // 
             // WeightLabel
@@ -126,9 +126,9 @@
             // 
             // HeightTextBox
             // 
-            this.HeightTextBox.Location = new System.Drawing.Point(150, 3);
+            this.HeightTextBox.Location = new System.Drawing.Point(153, 3);
             this.HeightTextBox.Name = "HeightTextBox";
-            this.HeightTextBox.Size = new System.Drawing.Size(162, 38);
+            this.HeightTextBox.Size = new System.Drawing.Size(119, 38);
             this.HeightTextBox.TabIndex = 2;
             this.HeightTextBox.TextChanged += new System.EventHandler(this.HeightTextBox_TextChanged);
             this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightTextBox_KeyPress);
@@ -145,15 +145,15 @@
             // 
             // WeightTextBox
             // 
-            this.WeightTextBox.Location = new System.Drawing.Point(150, 55);
+            this.WeightTextBox.Location = new System.Drawing.Point(153, 55);
             this.WeightTextBox.Name = "WeightTextBox";
-            this.WeightTextBox.Size = new System.Drawing.Size(162, 38);
+            this.WeightTextBox.Size = new System.Drawing.Size(119, 38);
             this.WeightTextBox.TabIndex = 3;
             this.WeightTextBox.TextChanged += new System.EventHandler(this.WeightTextBox_TextChanged);
             // 
             // Submitbutton
             // 
-            this.Submitbutton.Location = new System.Drawing.Point(56, 326);
+            this.Submitbutton.Location = new System.Drawing.Point(36, 321);
             this.Submitbutton.Name = "Submitbutton";
             this.Submitbutton.Size = new System.Drawing.Size(234, 35);
             this.Submitbutton.TabIndex = 6;
@@ -171,8 +171,8 @@
             this.BMITableLayoutPanel.Name = "BMITableLayoutPanel";
             this.BMITableLayoutPanel.RowCount = 2;
             this.BMITableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.BMITableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.BMITableLayoutPanel.Size = new System.Drawing.Size(318, 89);
+            this.BMITableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.BMITableLayoutPanel.Size = new System.Drawing.Size(280, 89);
             this.BMITableLayoutPanel.TabIndex = 7;
             // 
             // MultiLineTextBox
@@ -182,7 +182,7 @@
             this.MultiLineTextBox.Location = new System.Drawing.Point(3, 3);
             this.MultiLineTextBox.Name = "MultiLineTextBox";
             this.MultiLineTextBox.ReadOnly = true;
-            this.MultiLineTextBox.Size = new System.Drawing.Size(312, 38);
+            this.MultiLineTextBox.Size = new System.Drawing.Size(274, 38);
             this.MultiLineTextBox.TabIndex = 1;
             this.MultiLineTextBox.TextChanged += new System.EventHandler(this.MultiLineTextBox_TextChanged);
             // 
@@ -190,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 433);
+            this.ClientSize = new System.Drawing.Size(304, 441);
             this.Controls.Add(this.BMITableLayoutPanel);
             this.Controls.Add(this.Submitbutton);
             this.Controls.Add(this.UnitTableLayoutPanel);
@@ -202,7 +202,7 @@
             this.Name = "BMICalculator";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "BMI Calculator";
             this.Click += new System.EventHandler(this.BMICalculator_Click);
             this.UnitTableLayoutPanel.ResumeLayout(false);
             this.UnitTableLayoutPanel.PerformLayout();

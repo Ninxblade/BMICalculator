@@ -4,10 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BMICalculator
 {
     static class Program
     {
+
+        public static Dictionary<FormName, Form> Forms;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +19,13 @@ namespace BMICalculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculator());
+
+            Forms = new Dictionary<FormName, Form>();
+            Forms.Add(FormName.SPLASH_FORM, new Splash());
+            Forms.Add(FormName.BMI_CALCULATOR, new BMICalculator());
+
+            Application.Run(Forms[FormName.SPLASH_FORM]);
+           
         }
     }
 }
