@@ -40,6 +40,7 @@
             this.Submitbutton = new System.Windows.Forms.Button();
             this.BMITableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.MultiLineTextBox = new System.Windows.Forms.TextBox();
+            this.HideRadioButton = new System.Windows.Forms.RadioButton();
             this.UnitTableLayoutPanel.SuspendLayout();
             this.UserInputTableLayoutPanel.SuspendLayout();
             this.BMITableLayoutPanel.SuspendLayout();
@@ -47,16 +48,18 @@
             // 
             // UnitTableLayoutPanel
             // 
-            this.UnitTableLayoutPanel.ColumnCount = 1;
+            this.UnitTableLayoutPanel.ColumnCount = 2;
             this.UnitTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.UnitTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.UnitTableLayoutPanel.Controls.Add(this.MetricUnitRadioButton, 0, 1);
             this.UnitTableLayoutPanel.Controls.Add(this.ImperialUnitRadioButton, 0, 0);
+            this.UnitTableLayoutPanel.Controls.Add(this.HideRadioButton, 1, 0);
             this.UnitTableLayoutPanel.Location = new System.Drawing.Point(12, 104);
             this.UnitTableLayoutPanel.Name = "UnitTableLayoutPanel";
             this.UnitTableLayoutPanel.RowCount = 2;
             this.UnitTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.09489F));
             this.UnitTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.90511F));
-            this.UnitTableLayoutPanel.Size = new System.Drawing.Size(142, 97);
+            this.UnitTableLayoutPanel.Size = new System.Drawing.Size(180, 97);
             this.UnitTableLayoutPanel.TabIndex = 0;
             this.UnitTableLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.UnitTableLayoutPanel_Paint);
             // 
@@ -67,7 +70,6 @@
             this.MetricUnitRadioButton.Name = "MetricUnitRadioButton";
             this.MetricUnitRadioButton.Size = new System.Drawing.Size(130, 42);
             this.MetricUnitRadioButton.TabIndex = 1;
-            this.MetricUnitRadioButton.TabStop = true;
             this.MetricUnitRadioButton.Text = "Metric";
             this.MetricUnitRadioButton.UseVisualStyleBackColor = true;
             this.MetricUnitRadioButton.CheckedChanged += new System.EventHandler(this.MetricUnitRadioButton_CheckedChanged);
@@ -78,9 +80,8 @@
             this.ImperialUnitRadioButton.AutoSize = true;
             this.ImperialUnitRadioButton.Location = new System.Drawing.Point(3, 3);
             this.ImperialUnitRadioButton.Name = "ImperialUnitRadioButton";
-            this.ImperialUnitRadioButton.Size = new System.Drawing.Size(136, 43);
+            this.ImperialUnitRadioButton.Size = new System.Drawing.Size(154, 43);
             this.ImperialUnitRadioButton.TabIndex = 0;
-            this.ImperialUnitRadioButton.TabStop = true;
             this.ImperialUnitRadioButton.Text = "Imperial";
             this.ImperialUnitRadioButton.UseVisualStyleBackColor = true;
             this.ImperialUnitRadioButton.CheckedChanged += new System.EventHandler(this.ImperialUnitRadioButton_CheckedChanged);
@@ -130,6 +131,8 @@
             this.HeightTextBox.Name = "HeightTextBox";
             this.HeightTextBox.Size = new System.Drawing.Size(119, 45);
             this.HeightTextBox.TabIndex = 2;
+            this.HeightTextBox.Text = "0";
+            this.HeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.HeightTextBox.TextChanged += new System.EventHandler(this.HeightTextBox_TextChanged);
             this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightTextBox_KeyPress);
             // 
@@ -149,6 +152,8 @@
             this.WeightTextBox.Name = "WeightTextBox";
             this.WeightTextBox.Size = new System.Drawing.Size(119, 45);
             this.WeightTextBox.TabIndex = 3;
+            this.WeightTextBox.Text = "0";
+            this.WeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.WeightTextBox.TextChanged += new System.EventHandler(this.WeightTextBox_TextChanged);
             // 
             // Submitbutton
@@ -186,6 +191,17 @@
             this.MultiLineTextBox.TabIndex = 1;
             this.MultiLineTextBox.TextChanged += new System.EventHandler(this.MultiLineTextBox_TextChanged);
             // 
+            // HideRadioButton
+            // 
+            this.HideRadioButton.AutoSize = true;
+            this.HideRadioButton.Location = new System.Drawing.Point(163, 3);
+            this.HideRadioButton.Name = "HideRadioButton";
+            this.HideRadioButton.Size = new System.Drawing.Size(14, 16);
+            this.HideRadioButton.TabIndex = 2;
+            this.HideRadioButton.TabStop = true;
+            this.HideRadioButton.UseVisualStyleBackColor = true;
+            this.HideRadioButton.CheckedChanged += new System.EventHandler(this.HideRadioButton_CheckedChanged);
+            // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
@@ -203,6 +219,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
+            this.Load += new System.EventHandler(this.BMICalculator_Load);
             this.Click += new System.EventHandler(this.BMICalculator_Click);
             this.UnitTableLayoutPanel.ResumeLayout(false);
             this.UnitTableLayoutPanel.PerformLayout();
@@ -228,6 +245,7 @@
         private System.Windows.Forms.TextBox WeightTextBox;
         private System.Windows.Forms.TableLayoutPanel BMITableLayoutPanel;
         private System.Windows.Forms.TextBox MultiLineTextBox;
+        private System.Windows.Forms.RadioButton HideRadioButton;
     }
 }
 

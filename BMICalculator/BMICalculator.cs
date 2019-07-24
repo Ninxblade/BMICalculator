@@ -42,6 +42,10 @@ namespace BMICalculator
                 answer = (Weight * 703) / (BMIHeight * BMIHeight);
                 BMITextBox.Text = (answer).ToString();
             }
+            if(WeightTextBox.Text== "0" && HeightTextBox.Text == "0")
+            {
+                BMITextBox.Text = "0";
+            }
             // Display on the multi-line 
             answer = float.Parse(BMITextBox.Text);
             if (answer < 18.5)
@@ -60,6 +64,7 @@ namespace BMICalculator
             {
                 MultiLineTextBox.Text = "Obese";
             }
+           
         }
         private void WeightTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -123,12 +128,20 @@ namespace BMICalculator
         private void ImperialUnitRadioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-           
         }
         private void MetricUnitRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             
         }
 
+        private void BMICalculator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HideRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            HideRadioButton.Hide();
+        }
     }
 }
